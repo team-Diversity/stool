@@ -1,0 +1,24 @@
+npm install openai
+
+const fs = require('fs');
+const { OpenAIAPI } = require('openai');
+
+const openai = new OpenAIAPI({ key: 'YOUR_API_KEY' }); // Replace 'YOUR_API_KEY' with your actual OpenAI API key
+
+const audioFilePath = '/path/to/file/audio.mp3';
+
+// Read the audio file as a buffer
+const audioFileBuffer = fs.readFileSync(audioFilePath);
+
+// Create a transcription request
+openai.Audio.createTranscription({
+  model: 'whisper-1',
+  audio: audioFileBuffer,
+})
+  .then(response => {
+    const transcript = response.data.text;
+    console.log('Transcription:', transcript);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
