@@ -6,16 +6,22 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let db;
+
 rl.question('Enter port number: ', (port_number) => {
     console.log(`Connecting to MongoDB on port ${port_number}...`);
     const url = "mongodb://localhost:" + port_number + "/stooldb";
     mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
         .then(() => {
             console.log('Connected successfully to server');
+            db = mongoose.connection;
             rl.close();
+            
         })
         .catch(err => {
             console.log('Something went wrong, try again');
             rl.close();
         });
 });
+
+module.exports = db;
