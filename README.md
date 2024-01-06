@@ -20,7 +20,7 @@ Introducing Stool, a sophisticated Chrome browser extension designed to enhance 
 ## Getting Started
 
 
-# Follow these steps to seamlessly integrate Stool and leverage its cutting-edge technologies:
+### Follow these steps to seamlessly integrate Stool and leverage its cutting-edge technologies:
 
 1. **Install the Chrome Extension:**
 
