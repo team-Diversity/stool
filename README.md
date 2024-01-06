@@ -10,4 +10,12 @@ Introducing Stool, a sophisticated Chrome browser extension designed to enhance 
 - **Dynamic Text Highlighting**: Immerse yourself in the content with synchronized text highlighting, ensuring a cohesive and engaging viewing experience.
 - **Interactive Q&A with OpenAI**: Enhance your understanding by posing insightful questions directly to OpenAI, fostering a deeper connection with the video content.
 
+## Technologies Used
+
+- **React.js**: Leveraging React.js for an intuitive and responsive user interface, ensuring a seamless browsing experience.
+- **Node.js & Express.js**: Harnessing the power of Node.js for efficient back-end development, complemented by the expressiveness of Express.js to build a robust and scalable server architecture.
+- **Mongo.db**: Utilizing MongoDB to store and interact with the database, ensuring reliable data storage and retrieval.
+- **Jest.js**: Employing Jest.js to rigorously test the system's functionality, ensuring a high level of reliability and performance.
+
+## Getting Started
 
