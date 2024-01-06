@@ -87,12 +87,7 @@ body {
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #36393E;
 }
 
 a {
@@ -105,3 +100,17 @@ a {
     color-scheme: dark;
   }
 }
+
+.yes {
+  margin:auto;
+  margin-top: 300px;
+  width: 500px; /* Set the width of the rectangle */
+  height: 100px; /* Set the height of the rectangle */
+  background-color: #474A53; /* Set the background color of the rectangle */
+  color: white; /* Set the text color inside the rectangle */
+  text-align: center; /* Center the text horizontally */
+  line-height: 100px; 
+  justify-content: center;
+  align-items: center;
+}
+
