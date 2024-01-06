@@ -1,5 +1,5 @@
-import { Inter } from 'next/font/google'
-import './globals.css'
+import { Inter } from 'next/font/google';
+import './globals.css';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,6 +12,40 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
+
+      <head>
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width"></meta>
+        <title>replit</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+      </head>
+
+      <body>
+        <h1>Embedded YouTube Video</h1>
+        
+        <div style="width: 560px; height: 315px;">
+          <iframe width="100%" height="100%" id="myVideo" alt="Refresh Browser"         src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div>
+          <p>Only works with (Share Copy Embed Link) for now</p>
+          <label for="urlInput">Enter Video URL:</label>
+          <input type="text" id="urlInput" placeholder="Paste video link here"></input>
+          <button onclick="loadVideo()">Load Video</button>
+        </div>
+  
+  
+        <script>
+          function loadVideo() {
+            // Get the input value
+            // var videoUrl = document.getElementById("urlInput").value;
+            videoUrl = "https://www.youtube.com/embed/Bxagh8EG-ak?si=QvJrA-yV0wSEIX_k";
+            
+
+            // Set the src of iframe
+            document.getElementById("myVideo").src = videoUrl;
+          }
+        </script>
+      </body>
     </html>
   )
 }
