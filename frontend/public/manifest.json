@@ -1,6 +1,14 @@
 {
   "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "STOOL",
+  "version": "1.0.0",
+  "description": "Online Study Tool",
+  "manifest_version": 3,
+  "author": "Ervin Jon Lanada",
+  "action": {
+    "default_popup": "./popup.html",
+    "default_icon": "./icons/stool.png"
+  },
   "icons": [
     {
       "src": "favicon.ico",
