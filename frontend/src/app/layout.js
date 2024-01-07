@@ -1,4 +1,5 @@
 "use client"
+import { useState } from 'react'
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { loadVideo } from './loadURL.js';
@@ -9,10 +10,11 @@ import Video from '../components/video'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
+  const [newUrl, setNewUrl] = useState('');
 
-  const addVideo = (video) => {
-    console.log(video)
-    
+  const addVideo = ( vidUrl ) => {
+    console.log(vidUrl)
+    setNewUrl(vidUrl['url']);
   }
 
   return (
@@ -24,11 +26,9 @@ export default function RootLayout({ children }) {
         <link href="style.css" rel="stylesheet" type="text/css" />
       </head>
 
-      <body>        
-        <Video/>
-        {/* <InputURL/> */}
+      <body>   
+        <Video  url={ newUrl }/>
         <InputURL onLoad={ addVideo }/>
-
       </body>
 
     </html>
