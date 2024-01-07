@@ -31,7 +31,7 @@ function App() {
 }
 
 const AppStyled = styled.div`
-  background-color: red;
+  background-color: #1D4B55;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
