@@ -1,7 +1,30 @@
-import styled from 'styled-components'
-import { useGlobalContext } from '../../context/globalContext'
+import axios from 'axios';
+import { useState } from 'react';
+import styled from 'styled-components';
 
 function Input() {
+
+  const [urlValue, setUrlValue] = useState("https://www.youtube.com/watch?v=eknDtkl_98c&t=10s");
+  const [data, setData] = useState(null);
+
+  // const axios = require("axios")
+  const handleDownload = async () => {
+    const data = await axios.get(
+      `http://localhost:4000/download?url=${urlValue}`
+    );
+
+    const data1 = data.data.info.filter((video) => {
+      return (
+        video.mimeType === 'video/mp4; codecs="avc1.42001E, mp4a.40.2"' &&
+        video.qualityLabel === '360p'
+      );
+    });
+
+        
+    setData(data);
+    setUrlValue("");
+      };
+
     return (
       <InputStyled>
         <div className="text-section">
@@ -10,7 +33,7 @@ function Input() {
         <div className="input-section">
           <form>
             <input type="text" placeholder="Type input"></input>
-            <button>Quiz Me</button>
+            <button onClick={handleDownload}>Quiz Me</button>
             <button>Summarize</button>
           </form>
         </div>
