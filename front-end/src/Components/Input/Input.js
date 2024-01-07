@@ -5,6 +5,7 @@ function Input() {
     return (
       <InputStyled>
         <div className="text-section">
+        <p className="api-response">Donec feugiat at sapien non convallis. Donec justo quam, convallis eu feugiat maximus, luctus ac eros. Vivamus in commodo ex. Quisque congue dictum velit vel eleifend. Nam eu mauris vel ex sodales commodo sed non ligula. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam a sem tincidunt, tristique justo id, porttitor quam. Aliquam erat volutpat. Aenean vitae urna sollicitudin metus auctor placerat. Ut vulputate felis sit amet erat accumsan sodales. Nullam efficitur condimentum urna quis eleifend. </p>
         </div>
   
         <div className="input-section">
@@ -27,6 +28,10 @@ function Input() {
     padding: 20px;
     margin: 10px;
     height: 30vh; // Set a specific height for the text-section to make it taller
+  }
+
+  .api-response {
+    color: #FFFFFF;
   }
 
   .input-section {
