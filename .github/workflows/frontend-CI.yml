@@ -25,7 +25,9 @@ jobs:
         run: npm install
         working-directory: ./frontend
 
+      - name: Install Babel
+        run: npm install --save-dev @babel/preset-env @babel/preset-react babel-jest
+        working-directory: ./frontend
 
       - name: Run tests
         run: npm test
-        working-directory: ./frontend
