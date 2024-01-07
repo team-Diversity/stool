@@ -11,7 +11,6 @@ const InputURL = ({ onLoad }) => {
       alert('Please input URL')
       return
     }
-
     onLoad({ url })
     setVideo('')
   }
