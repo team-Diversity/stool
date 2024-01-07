@@ -10,7 +10,8 @@
   "author": "Ervin Jon Lanada",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "openai": "^4.24.1"
   },
   "devDependencies": {
     "jest": "^29.7.0"

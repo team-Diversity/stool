@@ -1,14 +1,33 @@
-import OpenAI from "openai";
+const OpenAI = require("openai");
 
-const openai = new OpenAI();
+const openai = new OpenAI({
+  apiKey: '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'
+});
 
 async function main() {
-  const completion = await openai.chat.completions.create({
-    messages: [{ role: "system", content: "You are a helpful assistant." }],
-    model: "gpt-3.5-turbo",
-  });
+  let retryCount = 0;
+  let response;
 
-  console.log(completion.choices[0]);
+  while (retryCount < 5) { // Maximum of 5 retries
+    try {
+      response = await openai.chat.completions.create({
+        messages: [{ role: "system", content: "You are a helpful assistant." }],
+        model: "gpt-3.5-turbo",
+      });
+
+      console.log(response.choices[0]);
+      break; // If the request was successful, break the loop
+    } catch (error) {
+      if (error.status === 429) { // If the error is a rate limit error
+        console.log('Rate limit exceeded. Retrying in 1 minute...');
+        await new Promise(resolve => setTimeout(resolve, 60000)); // Wait for 1 minute before retrying
+        retryCount++;
+      } else {
+        console.log('An error occurred:', error);
+        break;
+      }
+    }
+  }
 }
 
 main();
