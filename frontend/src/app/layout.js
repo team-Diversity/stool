@@ -1,5 +1,7 @@
+
 import { Inter } from 'next/font/google'
 import './globals.css'
+import SearchBar from './search_bar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -11,9 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <div className='yes'>
-        This is some grey text inside a div.
-    </div>
+      <SearchBar></SearchBar>
     </html>
   )
 }

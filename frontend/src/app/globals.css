@@ -103,14 +103,55 @@ a {
 
 .yes {
   margin:auto;
-  margin-top: 300px;
-  width: 500px; /* Set the width of the rectangle */
-  height: 100px; /* Set the height of the rectangle */
+  margin-top: 550px;
+  width: 699px; /* Set the width of the rectangle */
+  height: 71px; /* Set the height of the rectangle */
   background-color: #474A53; /* Set the background color of the rectangle */
+  border-radius: 7px;
+  border: 1px;
   color: white; /* Set the text color inside the rectangle */
   text-align: center; /* Center the text horizontally */
-  line-height: 100px; 
   justify-content: center;
   align-items: center;
+}
+
+/* Style the textbox input */
+input[type="text"] {
+  width: 500px;
+  height: 41px;
+  border-bottom-left-radius: 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  text-align: center;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 5px;
+  font-style: italic;
+  color: black;
+}
+
+/* Optional: Add additional styling for better visual representation */
+input[type="text"]:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.yes_mini{
+  width: 20px;
+  height: 10px;
+}
+
+/* Apply styles to the button tag */
+button {
+  background-color: #EFEFED;
+  color: black;
+  height: 38px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+
 }
 
