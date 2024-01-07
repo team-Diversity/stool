@@ -2,8 +2,6 @@
 import { useState } from 'react'
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { loadVideo } from './loadURL.js';
-// import Button from '../components/button'
 import InputURL from '../components/inputURL'
 import Video from '../components/video'
 
@@ -34,3 +32,4 @@ export default function RootLayout({ children }) {
     </html>
   )
 }
+
