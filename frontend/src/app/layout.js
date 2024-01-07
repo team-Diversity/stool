@@ -1,15 +1,20 @@
+"use client"
 import { Inter } from 'next/font/google';
 import './globals.css';
 import { loadVideo } from './loadURL.js';
+// import Button from '../components/button'
+import InputURL from '../components/inputURL'
+import Video from '../components/video'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata = {
-  title: 'Stool (Study Tool)',
-  description: 'Study Tool using OpenAi API',
-}
-
 export default function RootLayout({ children }) {
+
+  const addVideo = (video) => {
+    console.log(video)
+    
+  }
+
   return (
     <html lang="en">
       <head>
@@ -19,19 +24,11 @@ export default function RootLayout({ children }) {
         <link href="style.css" rel="stylesheet" type="text/css" />
       </head>
 
-      <body>
-        <h1>Embedded YouTube Video</h1>
-        
-        <div style={{width : '560px', height : '315px'}}>
-          <iframe width="100%" height="100%" id="myVideo" alt="Refresh Browser" src="" frameBorder="0" allowFullScreen></iframe>
-        </div>
+      <body>        
+        <Video/>
+        {/* <InputURL/> */}
+        <InputURL onLoad={ addVideo }/>
 
-        <div>
-          <p>Only works with (Share Copy Embed Link) for now</p>
-          <label htmlFor="urlInput">Enter Video URL:</label>
-          <input type="text" id="urlInput" placeholder="Paste video link here"></input>
-          <button onClick={loadVideo()}>Load Video</button>
-        </div>
       </body>
 
     </html>
