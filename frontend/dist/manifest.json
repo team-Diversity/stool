@@ -1,0 +1,12 @@
+{
+  "short_name": "React App",
+  "name": "STOOL",
+  "version": "1.0.0",
+  "description": "Online Study Tool",
+  "manifest_version": 3,
+  "author": "Ervin Jon Lanada",
+  "action": {
+    "default_popup": "./index.html",
+    "default_icon": "./icons/stool.png"
+  }
+}
