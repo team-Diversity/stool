@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 import { useGlobalContext } from '../../context/globalContext'
 
-function Video() {
+function Video( {url} ) {
     return (
       <VideoStyled>
-        <div class="video-section">
-          {/* Video content goes here */}
+        <div class="video-section" >
+            <iframe width="100%" height="100%" id="myVideo" alt="Refresh Browser" src={url} allowFullScreen></iframe>
         </div>
       </VideoStyled>
     )
@@ -27,4 +27,3 @@ const VideoStyled = styled.div`
 `;
 
 export default Video;
-
