@@ -23,19 +23,9 @@ app.get('/download', async (req, res) => {
       }
       
       
-      const videoUrls = metaInfo.formats;
-      
-
-      const data1 = videoUrls.filter((video) => {
-        return (
-          video.mimeType === 'video/mp4; codecs="avc1.42001E, mp4a.40.2"' &&
-          video.qualityLabel === '360p'
-        );
-      });
-      
-      
-      
-      const videoUrl = data1[0].url
+      const videoUrls = metaInfo.formats[metaInfo.formats.length -1];
+            
+      const videoUrl = videoUrls.url
 
       const axios = require('axios')
 
