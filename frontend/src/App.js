@@ -11,8 +11,12 @@ function App() {
   const [newUrl, setNewUrl] = useState('');
 
   const addVideo = ( vidUrl ) => {
-    console.log(vidUrl)
-    setNewUrl(vidUrl['url']);
+    // debug lines
+    // console.log(vidUrl);
+    // console.log(vidUrl['url']);
+    // console.log(vidUrl['url'].split('v=')[1]);
+    // console.log(vidUrl['url'].split('v=')[1].split('&')[0]);
+    setNewUrl(`https://www.youtube.com/embed/${vidUrl['url'].split('v=')[1].split('&')[0]}`);
   }
 
   return (
