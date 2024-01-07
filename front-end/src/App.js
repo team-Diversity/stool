@@ -8,16 +8,12 @@ import InputURL from './Components/inputURL';
 import Transcript from './Components/Transcript/Transcript';
 
 function App() {
-  // Define your video URL
-  // const videoUrl = "https://your-video-url.com";
-
   const [newUrl, setNewUrl] = useState('');
 
   const addVideo = ( vidUrl ) => {
     console.log(vidUrl)
     setNewUrl(vidUrl['url']);
   }
-
 
   return (
     <AppStyled className="App">
@@ -33,8 +29,6 @@ function App() {
     </AppStyled>
   );
 }
-
-
 
 const AppStyled = styled.div`
   background-color: red;

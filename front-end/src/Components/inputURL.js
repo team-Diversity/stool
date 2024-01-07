@@ -1,7 +1,6 @@
 "use client"
 import { useState } from 'react'
 
-
 const InputURL = ({ onLoad }) => {
   const [url, setVideo] = useState('')
 
@@ -14,7 +13,6 @@ const InputURL = ({ onLoad }) => {
     }
 
     onLoad({ url })
-
     setVideo('')
   }
 
