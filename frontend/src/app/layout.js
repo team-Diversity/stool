@@ -26,6 +26,8 @@ export default function RootLayout({ children }) {
 
       <body>   
         <Video  url={ newUrl }/>
+        <br></br>
+        <br></br>
         <InputURL onLoad={ addVideo }/>
       </body>
 
